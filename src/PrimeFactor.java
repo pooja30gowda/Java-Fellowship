@@ -14,6 +14,7 @@ public class PrimeFactor {
          }
       }
       if(n >2) {
+    	  
          System.out.println(n);
       }
    }
