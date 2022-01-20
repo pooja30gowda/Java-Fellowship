@@ -1,16 +1,25 @@
 package Day5;
+import java.util.Scanner;
+
 public class PowerOfTwo {
+	static void printTable(int pow) {
+		int val = 1;
+		for (int i = 1; i <= pow; i++) {
+			val = val * 2;
+			System.out.println(val);
+		}
+	}
 
-public static void main(String[] args) {
-
-int n = Integer.parseInt(args[0]);
-int i = 0; 
-int powerOfTwo = 1; 
-while (i <= n) {
-System.out.println(i + " " + powerOfTwo); 
-powerOfTwo = 2 * powerOfTwo; 
-i = i + 1;
-}
-}
-
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("enter to find power of 2 less than 32");
+		int pow = s.nextInt();
+		while (pow > 31) {
+			System.out.println("invalid input ");
+			System.out.println("enter value less than 32");
+			pow = s.nextInt();
+		}
+		printTable(pow);
+		s.close();
+	}
 }
